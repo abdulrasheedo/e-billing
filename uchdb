@@ -1,0 +1,18 @@
+-- Database: uchdb
+
+-- DROP DATABASE uchdb;
+
+CREATE DATABASE uchdb
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_Nigeria.1252'
+    LC_CTYPE = 'English_Nigeria.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+GRANT ALL ON DATABASE uchdb TO postgres;
+
+GRANT TEMPORARY, CONNECT ON DATABASE uchdb TO PUBLIC;
+
+GRANT TEMPORARY ON DATABASE uchdb TO flowcentral;
